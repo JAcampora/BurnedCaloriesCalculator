@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.acampora.burnedcaloriescalculator.ActivityBurnedCaloriesCalculator">
+
+    <TextView
+        style="@style/WidgetTextLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/weight"
+        android:id="@+id/weightLabel"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:id="@+id/weightEditText"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/weightLabel"
+        android:text="000"
+        android:singleLine="true" />
+
+    <TextView
+        style="@style/WidgetTextLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/miles_ran"
+        android:id="@+id/milesRanLabel"
+        android:layout_below="@+id/weightEditText"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1mi"
+        android:id="@+id/milesAmountLabel"
+        android:layout_alignBaseline="@id/milesRanLabel"
+        android:layout_toEndOf="@+id/milesRanLabel" />
+
+    <SeekBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/milesRanSeekBar"
+        android:layout_alignTop="@id/milesAmountLabel"
+        android:layout_alignEnd="@+id/weightEditText"
+        android:layout_toEndOf="@+id/milesAmountLabel"
+        android:indeterminate="false"
+        android:max="10"
+        android:progress="1" />
+
+    <TextView
+        style="@style/WidgetTextLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/calories_burned"
+        android:id="@+id/caloriesBurnedLabel"
+        android:layout_below="@+id/milesRanLabel"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00.0"
+        android:id="@+id/caloriesBurnedTextView"
+        android:layout_alignBaseline="@id/caloriesBurnedLabel"
+        android:layout_toEndOf="@+id/caloriesBurnedLabel" />
+
+    <TextView
+        style="@style/WidgetTextLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/height"
+        android:id="@+id/heightLabel"
+        android:layout_below="@+id/caloriesBurnedLabel"
+        android:layout_alignParentStart="true" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/heightFeetSpinner"
+        android:layout_below="@+id/caloriesBurnedLabel"
+        android:layout_toEndOf="@+id/heightLabel"
+        android:spinnerMode="dropdown" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/heightInchesSpinner"
+        android:layout_below="@+id/caloriesBurnedLabel"
+        android:layout_toEndOf="@+id/heightFeetSpinner"
+        android:spinnerMode="dropdown" />
+
+    <TextView
+        style="@style/WidgetTextLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bmi"
+        android:id="@+id/bmiLabel"
+        android:layout_below="@+id/heightLabel"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00"
+        android:id="@+id/bmiTextView"
+        android:layout_alignBaseline="@id/bmiLabel"
+        android:layout_toEndOf="@+id/bmiLabel" />
+
+    <TextView
+        style="@style/WidgetTextLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/name"
+        android:id="@+id/nameLabel"
+        android:layout_below="@+id/bmiLabel"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/nameEditText"
+        android:layout_alignBaseline="@id/nameLabel"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/nameLabel"
+        android:singleLine="true" />
+
+</RelativeLayout>
